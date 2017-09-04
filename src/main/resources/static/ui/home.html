@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="fileserver-app">
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/tether.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/drawer-styles.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/tether.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/home.js"></script>
+    <script type="text/javascript" src="../js/angular.min.js"></script>
+    <script type="text/javascript" src="../js/fileserver-angular-app.js"></script>
+    <script type="text/javascript" src="../js/fileserver-angular-controller.js"></script>
+
+</head>
+<body>
+<div class="full-size" ng-controller="fileListController as fControl">
+    <div class="nav-drawer">
+        <div class="drawer-link" ng-click="fControl.loadFiles()">
+            <img src="../img/icons/tasks.png" class="drawer-item-icon">Files list
+        </div>
+        <div class="drawer-link" ng-click="fControl.showUploadForm()">
+            <img src="../img/icons/groups.png" class="drawer-item-icon">Upload
+        </div>
+        <div class="drawer-section-other">
+            <div class="drawer-link">
+                <img src="../img/icons/settings.png" class="drawer-item-icon">Settings
+            </div>
+        </div>
+    </div>
+    <div class="top-panel">
+        <div class="location">
+            Home
+        </div>
+        <div class="location-end"></div>
+        <div class="logout-area">
+            <a class="logout-link" href="/ui/logout">Logout</a>
+        </div>
+    </div>
+
+    <div class="content hidden">
+        <div>
+            <ul ng-repeat="file in files">
+                <li><a href="/api/get-file/{{file.filename}}">{{file.filename}}, - {{file.size}} B</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+.nav-drawer {
+    width: 180px;
+    height: 100%;
+    background: rgb(230, 230, 230);
+    border: rgba(205, 205, 205, 0.51) 1px solid;
+    padding-top: 70px;
+    float: left;
+}
+
+.drawer-item-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.drawer-link {
+    padding: 5px 25px;
+}
+
+.drawer-link:hover,
+.drawer-link:active {
+    background: rgb(157, 182, 215);
+    cursor: pointer;
+    color: white;
+}
+
+.drawer-section-other {
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: solid 1px darkgray;
+}
+
+.top-panel {
+    height: 50px;
+    background: rgb(157, 182, 215);
+    width: 100%;
+    position: absolute;
+    overflow:hidden;
+    display: inline-block;
+    top: 0;
+    left: 0;
+}
+
+.location {
+    height: 50px;
+    background: rgb(230, 230, 230);
+    width: 180px;
+    border-bottom: solid 1px darkgray;
+    text-align: center;
+    font-size: 1.2em;
+    padding-top: 10px;
+}
+
+.location-end {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 180px;
+    background: url("../img/arrow.png")
+}
+
+.logout-area {
+    position: absolute;
+    right: 0;
+    top: 0;
+    float: right;
+    height: 100%;
+    display: inline-block;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+.logout-button {
+    background: rgb(230, 230, 230);
+    border: solid 1px darkgray;
+    padding: 2px 20px;
+}
+
+.logout-link {
+    color: white;
+    margin-top: 20px;
+    padding: 5px 20px;
+}
+
+.logout-link:hover,
+.logout-link:checked,
+.logout-link:active {
+    color: white;
+}
+
+.content {
+    /*background: white;*/
+    height: 100%;
+    margin-left: 220px;
+    margin-right: 50px;
+    padding-top: 75px;
+}
+
+.hidden {
+    display: none;
+}
